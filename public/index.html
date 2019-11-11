@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Chat</title>
+
+    <!-- WebSocket-Bibliothek für Browser laden: -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- Hier laden wir unser eigenes Programm: -->
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <h1>Chat</h1>
+    <!-- Anzeigefeld für ankommende Nachrichten: -->
+    <div id="Ausgabe" width="90%" style="overflow: scroll; background-color: rgb(213, 245, 242); height: 60vh;">
+        <ul id="liste">
+            <li>Hugo: Guten Morgen!</li>
+            <li>Irene: Hi Hugo!</li>
+        </ul>
+    </div>
+    <input type="text" id="eingabeText">
+    <button onclick="sendeEingabe();">Senden!</button>
+    <hr>
+    <h3>Neuen Benutzer anlegen</h3>
+    <label>Name: <input type="text" id="benutzername"></label>
+    <br>
+    <label>Passwort: <input type="password" id="eingabePasswort"></label>
+    <br>
+    <label>Passwort: <input type="password" id="eingabePasswort2"> (noch mal)</label>
+    <br>
+    <button onclick="benutzerAnlegen();">Benutzer anlegen</button>
+    <p id="hashAusgabe"></p>
+    <hr>
+
+    <h3>Bekannten Benutzer anmelden</h3>
+    <label>Name: <input type="text" id="loginName"></label>
+    <br>
+    <label>Passwort: <input type="password" id="loginPasswort"></label>
+    <br>
+    <button onclick="benutzerLogin();">Benutzer anlegen</button>
+    <p id="loginAusgabe"></p>
+
+</body>
+
+</html>
